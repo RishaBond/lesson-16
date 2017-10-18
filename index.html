@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Title</title>
+        <meta name="description" content="">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    </head>
+    <body class="content">
+        <img class="menu-in open" src="img/menu-in1.svg" width="48" height="48" alt="#">
+
+        <nav class="menu close">
+            <img class="menu-out" src="img/menu-out1.svg" width="48" height="48" alt="#">
+            <div class="menu__title">Menu</div>
+            <div class="menu__item"><a href="#">Home</a></div>
+            <div class="menu__item"><a href="#">About</a></div>
+            <div class="menu__item"><a href="#">Portfolio</a></div>
+            <div class="menu__item"><a href="#">Blog</a></div>
+            <div class="menu__item"><a href="#">Contact</a></div>
+        </nav>
+        <img class="menu-out" src="img/menu-out1.svg" width="48" height="48" alt="#">
+        <link rel="stylesheet" href="css/main.min.css">
+        <script src="js/scripts.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                var menu = $('.menu');
+                var menuIn = $('.menu-in');
+                var menuOut = $('.menu-out');
+                menuIn.click(function () {
+                    menu.removeClass('close'),
+                    menu.addClass('open')
+                });
+                menuOut.click(function () {
+                    menu.removeClass('open'),
+                    menu.addClass('close')
+                });
+            });
+        </script>
+
+    </body>
+</html>
